@@ -1,0 +1,148 @@
+.icon_1{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10%;
+    position: relative;
+    border: solid 1px #C694D7;
+    background: #C694D7;
+    border-radius: 8px;
+  }
+
+  .hole_clear{
+    content:"";
+    position:absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    border: solid 1px #C694D7;
+    border-radius: 100%;
+  }
+
+  .hole_clear:nth-child(1){
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+  }
+
+
+  .icon_2{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin-bottom: 10%;
+    border: solid 1px #4F4F4F;
+    background: #4F4F4F;
+    border-radius: 8px;
+    transform: skewX(-30deg);
+  }
+
+  .hole_complicated{
+    content:"";
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    transform: skewX(30deg);
+    border-radius: 100%;
+  }
+
+  .hole_complicated:nth-child(1) {
+    left: 27%;
+    right: 56.47%;
+    top: 56.67%;
+    bottom: 18.33%;
+  }
+
+  .hole_complicated:nth-child(2) {
+    left: 57.85%;
+    right: 25.62%;
+    top: 16.67%;
+    bottom: 58.33%;
+  }
+
+  .icon_3{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: solid 1px #6FCF97;
+    background: #6FCF97;
+    border-radius: 100%;
+  }
+
+  .hole_complex{
+    content:"";
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 100%;
+  }
+
+  .hole_complex:nth-child(1){
+    left: 37.5%;
+    right: 37.5%;
+    top: 62.5%;
+    bottom: 12.5%;
+  }
+
+  .hole_complex:nth-child(2){
+    left: 12.5%;
+    right: 62.5%;
+    top: 37.5%;
+    bottom: 37.5%;
+  }
+
+  .hole_complex:nth-child(3){
+    left: 37.5%;
+    right: 37.5%;
+    top: 12.5%;
+    bottom: 62.5%;
+  }
+
+  .hole_complex:nth-child(4){
+    left: 62.5%;
+    right: 12.5%;
+    top: 37.5%;
+    bottom: 37.5%;
+  }
+
+
+  .tokens{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background: #56CCF2;
+    border-radius: 100%;
+  }
+
+
+  .tooltip {
+    position: relative;
+    border-bottom: 1px transparent black;
+  }
+
+  .tooltip .tooltiptext {
+    display: none;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 105%;
+    /* left: 105%; */
+  }
+
+  .tooltip:hover .tooltiptext {
+    display:inline;
+  }
