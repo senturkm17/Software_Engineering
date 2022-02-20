@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Notes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js" integrity="sha512-nYuHvSAhY5lFZ4ixSViOwsEKFvlxHMU2NHts1ILuJgOS6ptUmAGt/0i5czIgMOahKZ6JN84YFDA+mCdky7dD8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div id="chat-wrap">
+        <h2> Retro notes</h2>
+        <div id = "chat-window">
+            <div id = "output">
+                <h1>Chat Window</h1>
+            </div>              
+        </div>
+        <input type = "text" id = "message" placeholder = "message">
+        <button id = "submitButton"> Send </button>
+    </div>
+
+    <script>
+    const socket = io.connect('http://localhost:3000')
+    const message = document.getElementById('message')
+    const submitButton = document.getElementById('submitButton')
+    const output = document.getElementById('output')
+
+    submitButton.addEventListener('click', () => {
+        socket.emit('chat', {
+            message: message.value
+        })
+    })
+
+    socket.on('chat', data => {
+        output.innerHTML += '<p>' + data.message + '</p>'
+        message.value = '';
+    })
+
+    </script>
+</body>
+</html>

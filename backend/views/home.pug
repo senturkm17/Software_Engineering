@@ -1,0 +1,34 @@
+html
+html
+   head
+      title Task generater
+      
+   body
+      form(action = "/generate_task", method = "POST")
+         div
+            label(for = "number") Number of player:
+            input(name = "number" value = 3)
+         br
+         button(type = "submit") Generate tasks
+
+      
+      button(type = "send", onclick = "send_data()") Generate tasks
+
+      script(src='/socket.io/socket.io.js')
+      script.
+         var socket = io();
+         socket.on("connect", () => {
+            
+            // console.log(socket.id);
+         });
+
+         socket.on("print_task", (arg)=> {
+            // console.log(arg);
+         });
+
+         function send_data(){
+            // console.log('foo');
+            socket.emit("put_token", {player: "player1", task: "task1"});
+         }
+
+      
